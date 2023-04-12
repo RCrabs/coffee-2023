@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+/*
+purple #8662b2 (134, 98, 178)
+yellow #dfc955 (242, 229, 92)
+cream #f6e7dc (246, 231, 220)
+orange #d16f5f (209, 111, 95)
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    text-align: left;
+    color: navy;
+    background-color: #f6e7dc;
+}
+
+h1 {
+    font: bold 2.2em Times, serif;
+    color: #d16f5f;
+    text-shadow: .05em .05em .1em gray;
+    letter-spacing: .3em;
+}
+
+h2 {
+    font-size: large;
+    text-transform: uppercase;
+    color: purple;
+    letter-spacing: .3em;
+}
+
+dt {
+    font-weight: bold;
+    color: purple;
+}
+
+strong {
+    font-style: italic;
+}
+
+/*-----Hero Image-----*/
+
+.hero_image {
+    background-image: linear-gradient(rgba(0,0,0,0.7),
+    rgba(0,0,0,0.4)), url(images/coffee_shop.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    max-width: 3000px;
+}
+
+.hero_header {
+    text-align: left;
+    color: white;
+    top: 40%;
+    text-shadow: .05em .05em .1em black;
+    font-size: 3em;
+    margin: 20px;
+}
+
+.hero_text {
+    text-align: left;
+    color: white;
+    top: 40%;
+    text-shadow: .05em .05em .1em black;
+    font-size: 1em;
+    margin: 20px;
+}
+
+/*-----Grid Index-----*/ /*------Media Query-----*/
+
+@media only screen and (max-width: 1200px) {
+    body {
+     color: yellow;
+     background-color: red;
+ }
+}
+ #container {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-areas:
+     'problem    problem     problem'
+     'img1       img1        img1'
+     'hlight1    hlight2     hlight3'
+     'about      about       about'
+     'product1   product2    product3'
+     'review     review      review';
+     background-color: white;
+ }
+
+ @media only screen and (min-width: 800px) {
+    body {
+        color: blue;
+        background-color: lightblue;
+    }
+}
+    
+@media only screen and (max-width: 600px) {
+    body {
+        color: green;
+        background-color: gray;
+    }
+}
+#container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+    'problem'
+    'img1'
+    'hlight1'
+    'about'
+    'hlight2'
+    'hlight3'
+    'product1'
+    'review'
+    'product2'
+    'product3';
+    justify-items: center;
+    background-color: white;
+    margin: 0 auto;
+    }
+
+#problem {
+    grid-area: problem;
+    object-fit: cover;
+}
+
+#img1 {
+    grid-area: img1;
+    object-fit: cover;
+}
+
+#img1 img {
+    width: 100%;
+}
+
+#hlight1 {
+    grid-area: hlight1;
+    object-fit: cover;
+}
+
+#hlight2 {
+    grid-area: hlight2;
+    object-fit: cover;
+}
+
+#hlight3 {
+    grid-area: hlight3;
+    object-fit: cover;
+}
+
+#about {
+    grid-area: about;
+    object-fit: cover;
+}
+
+#about about {
+    width: 100%;
+}
+
+#product1 {
+    grid-area: product1;
+    object-fit: cover;
+}
+
+#product2 {
+    grid-area: product2;
+    object-fit: cover;
+}
+
+#product3 {
+    grid-area: product3;
+    object-fit: cover;
+}
+
+#review {
+    grid-area: review;
+    object-fit: cover;
+}
+
+#problem, #review {
+    margin: 0px 15px 0px 30px;
+    padding: 60px 0px 60px 0px;
+}
+
+#hlight1, #hlight2, #hlight3 {
+    margin: 20px;
+}
+
+#product1, #product2, #product3 {
+    margin: 20px;
+}
+
+#about {
+    margin: 80px;
+    padding: 0px 0px 80px 0px;    
+}
+
+#img1 {
+    padding: 0px 0px 80px 0px;
+}
+
+/*-----IMAGES-----*/
+
+img {
+    max-width: 100%;
+}
+
+/*-----FOOTER-----*/
+
+footer {
+    background-color: rgb(57, 79, 94);
+    color: rgb(255, 248, 233);
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/*-----Nav Style-----*/
+
+.main_nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(57, 79, 94);
+    padding: .3em;
+    margin: 0;
+    max-width: 3200px;
+}
+
+.main_nav a {
+    color: white;
+    padding: 60px 40px;
+    text-decoration: none;
+}
+
+.main_nav a:hover {
+    background-color: white;
+    color: rgb(57, 79, 94);
+}
+
+li.logo {
+    margin-right: auto;
+}
+
+
+/*-----Menu Style-----*/
+
+.price {
+    color: sienna;
+    font-weight: bold;
+}
+
+.favorite {
+    color: tomato;
+    font-style: italic;
+}
+
+
+#drinks {
+    background-color: rgba(242, 292, 92, .25);
+    border: solid;
+    padding: 5px 20px;
+    margin: 10px 20px;
+}
+
+#healthy {
+    background-color: rgba(209, 111, 95, .15);
+    border: solid;
+    padding: 5px 20px;
+    margin: 10px 20px;
+}
+
+
+
+
+
+
